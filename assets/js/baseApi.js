@@ -13,7 +13,7 @@ $.ajaxPrefilter(function (options) {
     // 统一设置complete回调函数
     options.complete = function (res) {
       // 拿到服务器响应回来的数据
-      console.log(res.responseJSON);
+      // console.log(res.responseJSON);
       if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
         // 强制清空token
         localStorage.removeItem('token');
